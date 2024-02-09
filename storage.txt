@@ -1,0 +1,36 @@
+for connecting to the database 
+
+create rds for the database 
+choose the database name and database and other field
+
+go to django settings 
+configure the database 
+in host enter the endpoints as in rds 
+in rds -> check the security group and add the ip ( by default it is there)
+
+make migrations and runserver 
+it's done
+
+
+
+s3 
+create a bucket 
+go to settings in django
+
+pip install boto3
+pip install django-storage
+
+
+AWS_ACCESS_KEY_ID = 'your access key'
+AWS_SECRET_ACCESS_KEY= 'your secret key'
+AWS_STORAGE_BUCKET_NAME='bucket name'
+AWS_S3_SIGNATURE_NAME='s3v4'
+AWS_S3_REGION_NAME='region'
+AWS_S3_FILE_OVERWRITE=False
+AWS_DEFAULT_ACT=None
+AWS_S3_VERIFY= True
+DEFAULT_FILE_STORAGE= 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+for access key
+make the iam user 
